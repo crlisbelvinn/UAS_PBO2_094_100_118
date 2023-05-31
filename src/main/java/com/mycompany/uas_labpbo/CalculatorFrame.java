@@ -100,21 +100,27 @@ public class CalculatorFrame extends javax.swing.JFrame {
         divideButton = new javax.swing.JButton();
         moduloButton = new javax.swing.JButton();
         clearButton = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(51, 153, 255));
+        jPanel1.setPreferredSize(new java.awt.Dimension(512, 900));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         numField1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         numField1.setToolTipText("Masukkan angka");
+        jPanel1.add(numField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 260, 261, 40));
 
         numField2.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         numField2.setToolTipText("Masukkan angka");
+        jPanel1.add(numField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 370, 261, 40));
 
         resultField.setEditable(false);
         resultField.setBackground(new java.awt.Color(204, 204, 204));
         resultField.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         resultField.setDisabledTextColor(new java.awt.Color(102, 102, 102));
+        jPanel1.add(resultField, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 730, 261, 40));
 
         addButton.setText("+");
         addButton.addActionListener(new java.awt.event.ActionListener() {
@@ -122,6 +128,7 @@ public class CalculatorFrame extends javax.swing.JFrame {
                 addButtonActionPerformed(evt);
             }
         });
+        jPanel1.add(addButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 540, 77, 40));
 
         subtractButton.setText("-");
         subtractButton.addActionListener(new java.awt.event.ActionListener() {
@@ -129,6 +136,7 @@ public class CalculatorFrame extends javax.swing.JFrame {
                 subtractButtonActionPerformed(evt);
             }
         });
+        jPanel1.add(subtractButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 540, 77, 40));
 
         multiplyButton.setText("x");
         multiplyButton.addActionListener(new java.awt.event.ActionListener() {
@@ -136,6 +144,7 @@ public class CalculatorFrame extends javax.swing.JFrame {
                 multiplyButtonActionPerformed(evt);
             }
         });
+        jPanel1.add(multiplyButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 590, 77, 40));
 
         divideButton.setText("/");
         divideButton.addActionListener(new java.awt.event.ActionListener() {
@@ -143,6 +152,7 @@ public class CalculatorFrame extends javax.swing.JFrame {
                 divideButtonActionPerformed(evt);
             }
         });
+        jPanel1.add(divideButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 590, 77, 40));
 
         moduloButton.setText("mod");
         moduloButton.addActionListener(new java.awt.event.ActionListener() {
@@ -150,6 +160,7 @@ public class CalculatorFrame extends javax.swing.JFrame {
                 moduloButtonActionPerformed(evt);
             }
         });
+        jPanel1.add(moduloButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 540, 77, 40));
 
         clearButton.setText("Clear");
         clearButton.addActionListener(new java.awt.event.ActionListener() {
@@ -157,58 +168,16 @@ public class CalculatorFrame extends javax.swing.JFrame {
                 clearButtonActionPerformed(evt);
             }
         });
+        jPanel1.add(clearButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 590, 77, 40));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(144, 144, 144)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(addButton, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(subtractButton, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(moduloButton, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(numField1)
-                    .addComponent(numField2)
-                    .addComponent(resultField)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(multiplyButton, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(divideButton, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(clearButton, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE)))
-                .addContainerGap(195, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(51, 51, 51)
-                .addComponent(numField1, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(38, 38, 38)
-                .addComponent(numField2, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(34, 34, 34)
-                .addComponent(resultField, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(38, 38, 38)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(addButton)
-                    .addComponent(subtractButton)
-                    .addComponent(moduloButton))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(multiplyButton)
-                    .addComponent(divideButton)
-                    .addComponent(clearButton))
-                .addContainerGap(43, Short.MAX_VALUE))
-        );
+        jLabel1.setIcon(new javax.swing.ImageIcon("/Users/hiskiasinaga/Downloads/UAS_labpbo/src/main/java/com/mycompany/uas_labpbo/Dashboard Background.png")); // NOI18N
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -349,6 +318,7 @@ public class CalculatorFrame extends javax.swing.JFrame {
     private javax.swing.JButton addButton;
     private javax.swing.JButton clearButton;
     private javax.swing.JButton divideButton;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JButton moduloButton;
     private javax.swing.JButton multiplyButton;
